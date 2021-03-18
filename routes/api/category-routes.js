@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { receiveMessageOnPort } = require("node:worker_threads");
 const { Category, Product } = require("../../models");
 
 // The `/api/categories` endpoint
@@ -46,6 +47,17 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", (req, res) => {
   // update a category by its `id` value
+  try {
+    const categoryData = await Category.update(req.body, {
+    
+      where: {
+        id: req.params.id
+      },
+    });
+    res.status(200).json(categoryData)
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 router.delete("/:id", async (req, res) => {
