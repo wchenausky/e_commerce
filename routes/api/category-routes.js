@@ -19,7 +19,7 @@ router.get("/:id", async (req, res) => {
   // be sure to include its associated Products
   try {
     const categoryData = await Category.findByPk(req.params.id, { 
-      include: [{ model: Product, through: Product, as: 'categry_id'}]
+      include: [{ model: Pro, through: Product, as: 'categry_id'}]
     });
     if (!categoryData) {
       res.status(404).json({ message: "No category found with that id!" });
@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
 router.put("/:id",async (req, res) => {
   // update a category by its `id` value
   try {
-    const categoryData = await Category.update({
+    const categoryData = await Category.update(req.body, {
       where: {
         id: req.params.id
       }
