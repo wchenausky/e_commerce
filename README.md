@@ -35,4 +35,4 @@ My GitHub Page: [github.com/wchenausky](github.com/wchenausky)
 
 - Screenscastify: [https://drive.google.com/file/d/1VCFKr_pFWIK8rtIgSBYaQj_2vDq-q_3o/view](https://drive.google.com/file/d/1VCFKr_pFWIK8rtIgSBYaQj_2vDq-q_3o/view)
 
-- Github Repository: [https://github.com/wchenausky/e_commerce]](https://github.com/wchenausky/e_commerce)
+- Github Repository: [https://github.com/wchenausky/e_commerce](https://github.com/wchenausky/e_commerce)
